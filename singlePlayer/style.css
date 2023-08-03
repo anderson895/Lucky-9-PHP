@@ -1,0 +1,372 @@
+.card-container,
+.btn-container,
+.chance-block {
+  min-width: 600px;
+  max-height: 300px;
+}
+
+.card-container {
+  /*   background:#9e9e9e; */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.btn-container {
+  margin-top: 15px;
+}
+
+.cards {
+  /*   background: #e0e0e0; */
+  min-width: 150px;
+  min-height: 230px;
+  margin: 20px 0;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+}
+
+.play,
+.another-card {
+  width: 100%;
+  text-align: center;
+}
+
+.another-card {
+  min-width: 450px;
+  font-size: 36px;
+  color: #502749;
+  margin-top: 10px;
+  font-family: "Aclonica", sans-serif;
+}
+
+.chance-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 50px;
+}
+.chance {
+  width: 50%;
+  font-family: "Aclonica", sans-serif;
+  font-size: 25px;
+}
+
+/* Flip Cards animation */
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+/* .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+} */
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+/* end -- Flip Cards animation */
+
+.flip-card-front {
+  /*   margin: 5% auto 0; */
+  background-image: url(http://www.titanui.com/wp-content/uploads/2013/01/Violet-Classical-Pattern-Background-1.jpg);
+  background-position: center center;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  /*   border: 5px solid white; */
+  /*   opacity: 0.5; */
+  border: 10px double white;
+}
+
+.cards,
+.flip-card-inner,
+.flip-card-front,
+.flip-card-back {
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+}
+
+.flip-card-back {
+  font-family: "Abril Fatface", cursive;
+  background: white;
+  color: black;
+
+  border: 10px double #502749;
+}
+
+.use-font {
+  font-family: "Abril Fatface", cursive;
+}
+
+#card1,
+#card2,
+#card3 {
+  font-size: 135px;
+}
+
+.play {
+  font-family: "Aclonica", sans-serif;
+}
+
+.play,
+.chance,
+#restart {
+  font-size: 36px;
+  outline: none;
+  border: none;
+  background: #502749;
+  color: white;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  line-height: 45px;
+  padding: 5px 10px;
+}
+
+.slideInRight {
+  animation-duration: 3s;
+}
+
+.chance-container {
+  display: none;
+}
+
+/* #play:focus ~ .chance-container {
+  display:block;
+} */
+
+.full-block {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-block {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: transparent;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #502749;
+  flex-direction: column;
+  display: none;
+}
+
+.result,
+.title-opp-cards {
+  font-size: 50px;
+  color: white;
+  font-family: "Aclonica", sans-serif;
+}
+
+.opp-cards-front {
+  font-family: "Abril Fatface", cursive;
+  background: white;
+  color: #502749;
+  border: 10px double #502749;
+
+  background: white;
+  font-size: 135px;
+  text-align: center;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  min-width: 130px;
+}
+
+.result {
+  font-weight: bolder;
+}
+.title-opp-cards {
+  margin-top: 40px;
+  font-size: 30px;
+}
+
+#opponent-cards {
+  display: flex;
+  flex-direction: row;
+  min-width: 250px;
+  justify-content: space-evenly;
+}
+
+#restart {
+  border: 10px double #502749;
+  background: white;
+  color: #502749;
+  font-family: "Aclonica", sans-serif;
+}
+
+.proj-title {
+  font-family: "Aclonica", sans-serif;
+  color: #502749;
+  font-size: 72px;
+  font-weight: bolder;
+}
+
+body {
+  background: #e0e9ef;
+}
+
+.load-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #502749;
+}
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: white; /*#333;*/
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%,
+  70%,
+  100% {
+    -webkit-transform: scale3D(1, 1, 1);
+    transform: scale3D(1, 1, 1);
+  }
+  35% {
+    -webkit-transform: scale3D(0, 0, 1);
+    transform: scale3D(0, 0, 1);
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%,
+  70%,
+  100% {
+    -webkit-transform: scale3D(1, 1, 1);
+    transform: scale3D(1, 1, 1);
+  }
+  35% {
+    -webkit-transform: scale3D(0, 0, 1);
+    transform: scale3D(0, 0, 1);
+  }
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1.5s, opacity 1.5s linear;
+}
+
+.initial-btn:hover {
+  cursor: pointer;
+  background: #552c4e;
+}
+
+.initial-btn:focus {
+  background: #e0e9ef;
+  color: #502749;
+  border: 3px solid #502749;
+  line-height: 40px;
+}
+#restart:hover {
+  cursor: pointer;
+  background: #F0F0F0;
+}
+#restart:focus {
+  background: #502749;
+  color: white;
+  border: 5px solid white;
+}
